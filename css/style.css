@@ -57,9 +57,16 @@ main {
 
 
 /* SEARCH-BAR */
+.search-bar-icon-box {
+    border: solid 1px #b0b0b075;
+    border-right: none;
+}
+
 .search-bar-box i {
     font-size: 1rem;
     color: #b0b0b0;
 }
 
-.search-bar {}
+.search-bar-box input {
+    border: solid 1px #b0b0b075;
+}

@@ -25,9 +25,9 @@
 
 
 
-<body data-bs-theme="" id="app" class="py-5">
+<body data-bs-theme="" class="py-5">
 
-    <main class="container m-auto d-flex p-0">
+    <main id="app" class="container m-auto d-flex p-0">
 
 
 
@@ -64,9 +64,12 @@
 
 
             <!-- serch bar/contact filter -->
-            <div class="d-flex align-items-center search-bar-box">
-                <i class=" fw-bold fa-solid fa-magnifying-glass"></i>
-                <input class="rounded-0 form-control" type="search" placeholder="Search" aria-label="Search">
+            <div class="d-flex search-bar-box">
+                <div class=" search-bar-icon-box bg-white d-flex align-items-center rounded-1 rounded-end-0">
+                    <i class="fw-bold fa-solid fa-magnifying-glass px-4"></i>
+                </div>
+                <input id="serch-bar" class="rounded-1 rounded-start-0 form-control search-bar-box bg-white"
+                    type="search" placeholder="Search" aria-label="Search">
             </div>
 
         </section>
