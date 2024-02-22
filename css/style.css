@@ -1,11 +1,9 @@
 body {
-    background: linear-gradient(to top, white 80%, #009688 80%, #009688 100%);
+    background: linear-gradient(to top, #dcdbd3 80%, #009688 80%, #009688 100%);
     min-height: 100vh;
     /* font */
     font-family: 'Roboto', sans-serif;
 }
-
-
 
 main {
     /* test */
@@ -13,4 +11,10 @@ main {
 
     background-color: white;
     max-height: 700px;
+}
+
+/* ICONS */
+* i.header-icon {
+    font-size: 1.5rem;
+    color: #b0b0b0;
 }
