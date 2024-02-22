@@ -7,7 +7,7 @@ body {
 
 main {
     /* test */
-    height: 700px;
+
 
     background-color: white;
     max-height: 700px;
@@ -69,4 +69,15 @@ main {
 
 .search-bar-box input {
     border: solid 1px #b0b0b075;
+}
+
+
+
+
+
+
+/* CONTACT LIST */
+.contact-list-box {
+    border-top: solid 1px #b0b0b075;
+    background-color: white;
 }

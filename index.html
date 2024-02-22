@@ -72,6 +72,26 @@
                     type="search" placeholder="Search" aria-label="Search">
             </div>
 
+
+
+            <!-- dynamic contact list -->
+            <div class="contact-list-box" v-for="(contactItem, index) in contacts" :key="index">
+                <div class="contact-box d-flex align-items-center justify-content-between">
+                    <div class="contact-info-box d-flex ">
+                        <img class="avatar" :src="contactItem.avatar" alt="">
+                        <div class="d-flex flex-column align-content-center">
+                            <span class="text-capitalize ">{{contactItem.name}}</span>
+                            <span class="last-message">{{ contactItem.messages[contactItem.messages.length - 1].message
+                                }}</span>
+                        </div>
+                    </div>
+                    <span class="last-message-time">{{ contactItem.messages[contactItem.messages.length - 1].date
+                        }}</span>
+                </div>
+            </div>
+
+
+
         </section>
 
 
