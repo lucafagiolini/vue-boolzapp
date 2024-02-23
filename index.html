@@ -27,23 +27,23 @@
 
 <body data-bs-theme="" class="py-5">
 
-    <main id="app" class="container m-auto d-flex p-0">
+    <main id="app" class="container m-auto d-flex p-0 my-5">
 
 
 
 
 
         <!-- ****************** SECTION CONTACT LIST ****************** -->
-        <section id="contact-list-big-box" class="col-4 test">
+        <section id="contact-list-big-box" class="col-4">
             <!-- header contact list -->
             <header class="d-flex justify-content-between align-items-center">
                 <!-- profile -->
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center p-2">
                     <img class="avatar" src="./img/avatar_io.jpg" alt="">
                     <span class="text-capitalize">sofia</span>
                 </div>
                 <!-- header icons -->
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center gap-3 px-4">
                     <i class="fa-solid fa-circle-notch header-icon"></i>
                     <i class="fa-solid fa-message header-icon"></i>
                     <i class="fa-solid fa-ellipsis-vertical header-icon"></i>
@@ -51,12 +51,12 @@
             </header>
 
             <!-- activate notifications on deskstop -->
-            <div class="notification-badge d-flex align-items-center">
+            <div class="notification-badge d-flex align-items-center p-3">
                 <span
                     class="d-flex notification-box-icon notification-box-icon justify-content-center align-items-center">
-                    <i class="fa-solid fa-bell-slash notification-icon text-center  "></i>
+                    <i class="fa-solid fa-bell-slash notification-icon text-center"></i>
                 </span>
-                <span class="d-flex flex-column notification-badge-text">
+                <span class="d-flex flex-column notification-badge-text px-2">
                     <span>Ricevi notifiche di nuovi messaggi</span>
                     <a href="#">Attiva notifiche desktop</a>
                 </span>
@@ -64,30 +64,45 @@
 
 
             <!-- serch bar/contact filter -->
-            <div class="d-flex search-bar-box">
-                <div class=" search-bar-icon-box bg-white d-flex align-items-center rounded-1 rounded-end-0">
+            <div class="d-flex search-bar-box p-1">
+                <div class="search-bar-icon-box bg-white d-flex align-items-center rounded-1 rounded-end-0">
                     <i class="fw-bold fa-solid fa-magnifying-glass px-4"></i>
                 </div>
-                <input id="serch-bar" class="rounded-1 rounded-start-0 form-control search-bar-box bg-white"
+                <input id="search-bar" class="rounded-1 rounded-start-0 form-control search-bar-box bg-white"
                     type="search" placeholder="Search" aria-label="Search">
             </div>
 
 
 
             <!-- dynamic contact list -->
-            <div class="contact-list-box" v-for="(contactItem, index) in contacts" :key="index">
-                <div class="contact-box d-flex align-items-center justify-content-between">
-                    <div class="contact-info-box d-flex ">
-                        <img class="avatar" :src="contactItem.avatar" alt="">
-                        <div class="d-flex flex-column align-content-center">
-                            <span class="text-capitalize ">{{contactItem.name}}</span>
-                            <span class="last-message">{{ contactItem.messages[contactItem.messages.length - 1].message
-                                }}</span>
+            <div class="contact-list-container h-100">
+                <div class="contact-list-box" v-for="(contactItem, index) in contacts" :key="index">
+                    <div class="contact-box">
+                        <div class="contact-info-box d-flex align-items-center">
+                            <div>
+                                <img class="avatar" :src="contactItem.avatar" alt="">
+                            </div>
+
+                            <div class="d-flex flex-column w-100 pe-2">
+                                <div class="d-flex justify-content-between align-content-center flex-grow-1">
+                                    <span class="contact-name text-capitalize ">{{contactItem.name}}</span>
+                                    <span class="last-message-time">{{ contactItem.messages[contactItem.messages.length
+                                        -
+                                        1].date
+                                        }}</span>
+                                </div>
+                                <div>
+                                    <span class="last-message">{{ contactItem.messages[contactItem.messages.length -
+                                        1].message
+                                        }}</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <span class="last-message-time">{{ contactItem.messages[contactItem.messages.length - 1].date
-                        }}</span>
                 </div>
+            </div>
+            <div class="contact-list-aria">
             </div>
 
 

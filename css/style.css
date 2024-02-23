@@ -1,21 +1,19 @@
 body {
     background: linear-gradient(to top, #dcdbd3 80%, #009688 80%, #009688 100%);
-    min-height: 100vh;
+    max-height: 100;
+
     /* font */
     font-family: 'Roboto', sans-serif;
 }
 
 main {
     /* test */
-
-
     background-color: white;
-    max-height: 700px;
 }
 
 /* ICONS */
 * i.header-icon {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #b0b0b0;
 }
 
@@ -40,7 +38,7 @@ main {
 }
 
 .notification-badge-text a {
-    color: #b0b0b0;
+    color: #6a6a6a;
 }
 
 
@@ -49,6 +47,7 @@ main {
 
 /* AVATARS */
 * img.avatar {
+    margin: .5rem;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -57,13 +56,20 @@ main {
 
 
 /* SEARCH-BAR */
+#search-bar {
+    font-size: .8rem;
+}
+
+
+
+
 .search-bar-icon-box {
     border: solid 1px #b0b0b075;
     border-right: none;
 }
 
 .search-bar-box i {
-    font-size: 1rem;
+    font-size: .8rem;
     color: #b0b0b0;
 }
 
@@ -77,7 +83,42 @@ main {
 
 
 /* CONTACT LIST */
+#contact-list-big-box {
+    border-right: solid 1px #b0b0b075;
+}
+
+.contact-list-container {
+    overflow-y: auto;
+}
+
 .contact-list-box {
     border-top: solid 1px #b0b0b075;
     background-color: white;
+}
+
+.contact-name {
+    font-size: .8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.last-message {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #b0b0b0;
+    line-height: .1rem;
+}
+
+.last-message-time {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    color: #b0b0b0;
+}
+
+.contact-list-aria {
+    height: 50px;
 }
