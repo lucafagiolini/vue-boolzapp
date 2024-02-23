@@ -76,7 +76,8 @@
 
             <!-- dynamic contact list -->
             <div class="contact-list-container h-100">
-                <div class="contact-list-box" v-for="(contactItem, index) in contacts" :key="index">
+                <div class="contact-list-box" v-for="(contactItem, index) in contacts" :key="index"
+                    @mouseover="changeColor" ref="contactList" @click="showChat">
                     <div class="contact-box">
                         <div class="contact-info-box d-flex align-items-center">
                             <div>
@@ -128,7 +129,31 @@
 
         <!-- ****************** SECTION CHAT DISPLAY ****************** -->
         <section id="chat-display-big-box" class="col-8">
-            ciao
+            <header class="d-flex justify-content-between align-items-center">
+                <!-- profile -->
+                <div class="d-flex align-items-center p-2">
+                    <img class="avatar" src="./img/avatar_io.jpg" alt="">
+                    <span class="text-capitalize">sofia</span>
+                </div>
+                <!-- header icons -->
+                <div class="d-flex align-items-center gap-3 px-4">
+                    <i class="fa-solid fa-circle-notch header-icon"></i>
+                    <i class="fa-solid fa-message header-icon"></i>
+                    <i class="fa-solid fa-ellipsis-vertical header-icon"></i>
+                </div>
+            </header>
+
+            <div id="chat-display" class="h-100">
+                <div v-for="(messageItem, index) in contacts" :key="index">
+                    <div :class="messageItem.messages.status">
+                        <span>{{messageItem.messages.message}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
 
         </section>
 

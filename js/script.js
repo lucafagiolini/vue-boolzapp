@@ -2,6 +2,7 @@
 const { createApp } = Vue;
 createApp({
     data() {
+
         return {
             // tutti i nostri dati
 
@@ -170,6 +171,21 @@ createApp({
             ]
 
         }
-    }
+    },
+
+    methods: {
+        // function that will change the contact color when overing
+        changeColor(index) {
+            // this.$refs.contactList[index].classList.add('hover');
+            console.log("hover");
+        },
+
+        // function that will show the contact-item and all the messages on the chat-display when clicked
+        showChat(index) {
+            console.log("clciked");
+
+        }
+
+    },
 }).mount("#app");
 // ******** VUE ********
