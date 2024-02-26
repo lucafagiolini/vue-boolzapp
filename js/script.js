@@ -168,7 +168,9 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+
+            activeIndex: 0,
 
         }
     },
@@ -184,7 +186,13 @@ createApp({
         showChat(index) {
             console.log("clciked");
 
-        }
+        },
+
+
+        // function that will open the chat when clicked 
+        openChat(index) {
+            this.activeIndex = index;
+        },
 
     },
 }).mount("#app");

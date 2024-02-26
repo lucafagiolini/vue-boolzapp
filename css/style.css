@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(to top, #dcdbd3 80%, #009688 80%, #009688 100%);
+    background-repeat: no-repeat;
     height: 100vh;
     /* font */
     font-family: 'Roboto', sans-serif;
@@ -9,7 +10,6 @@ body {
 main {
     /* test */
     background-color: white;
-
     z-index: 1;
 }
 
@@ -91,9 +91,9 @@ main {
     border-right: solid 1px #b0b0b075;
 }
 
-.contact-list-container {
+#contact-list-container {
     overflow-y: auto;
-    max-height: 100%;
+
 }
 
 .contact-list-box {
@@ -135,5 +135,11 @@ main {
 #chat-display {
     background-image: url(../img/mine.jpg);
     background-size: fill;
+
     height: calc(100% - 82px);
+}
+
+#chat-display-big-box {
+    overflow-y: hidden;
+    height: 100%;
 }
