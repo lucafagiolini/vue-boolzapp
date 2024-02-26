@@ -148,10 +148,12 @@
             </header>
 
             <div id="chat-display" class="">
-                <div v-for="(messageItem, index) in contacts[activeIndex].messages" :key="index">
-                    <div :class="messageItem.status">
-                        <span>{{messageItem.message}}</span>
-                        <span>{{messageItem.date}}</span>
+                <div id="chat-container" class="d-flex flex-column gap-3 p-5">
+                    <div class="" v-for="(messageItem, index) in contacts[activeIndex].messages" :key="index">
+                        <div class="message p-3" :class="messageItem.status">
+                            <span>{{messageItem.message}}</span>
+                            <span>{{messageItem.date}}</span>
+                        </div>
                     </div>
                 </div>
 

@@ -143,3 +143,22 @@ main {
     overflow-y: hidden;
     height: 100%;
 }
+
+.message {
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+
+}
+
+.sent {
+    background-color: #d6f9ba;
+    color: black;
+    align-items: flex-start;
+}
+
+.received {
+    background-color: #f0f0f0;
+    color: black;
+    align-items: flex-end;
+}
