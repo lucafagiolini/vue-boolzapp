@@ -171,7 +171,6 @@ createApp({
             ],
 
             activeIndex: 0,
-
         }
     },
 
@@ -179,19 +178,15 @@ createApp({
         // function that will change the contact color when overing
         changeColor(index) {
             // this.$refs.contactList[index].classList.add('hover');
-            console.log("hover");
+            // console.log("hover");
         },
-
-        // function that will show the contact-item and all the messages on the chat-display when clicked
-        showChat(index) {
-            console.log("clciked");
-
-        },
-
 
         // function that will open the chat when clicked 
         openChat(index) {
+
+            // at the click il get the index of the contact and i will set it as the active index
             this.activeIndex = index;
+            console.log(this.activeIndex);
         },
 
     },
