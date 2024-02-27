@@ -151,14 +151,21 @@ main {
 
 }
 
-.sent {
+.message.sent {
     background-color: #d6f9ba;
     color: black;
-    align-items: flex-start;
+    align-self: flex-end;
 }
 
-.received {
+.message.received {
     background-color: #f0f0f0;
     color: black;
-    align-items: flex-end;
+    align-self: flex-start;
+}
+
+.inner-message-date {
+
+    font-size: 0.6rem;
+    color: #b0b0b0;
+
 }
