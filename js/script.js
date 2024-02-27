@@ -169,9 +169,13 @@ createApp({
                 }
             ],
 
+            currentIndex: 0,
+
             activeIndex: 0,
 
             newMessage: '',
+
+            inputFilter: '',
         }
     },
 
@@ -225,6 +229,19 @@ createApp({
             }, 1000);
         },
 
+
+
+
     },
+
+    // function that will filter the contacts
+    computed: {
+        filteredContacts() {
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().includes(this.inputFilter.toLowerCase());
+            });
+        }
+    }
+
 }).mount("#app");
 // ******** VUE ********

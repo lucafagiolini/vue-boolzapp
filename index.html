@@ -73,15 +73,16 @@
                     <i class="fw-bold fa-solid fa-magnifying-glass px-4"></i>
                 </div>
                 <input id="search-bar" class="rounded-1 rounded-start-0 form-control search-bar-box bg-white"
-                    type="search" placeholder="Search" aria-label="Search">
+                    type="search" placeholder="Search" aria-label="Search" v-model="inputFilter">
             </div>
 
 
 
             <!-- dynamic contact list -->
             <div id="contact-list-container">
-                <div class="contact-list-box" v-for="(contactItem, index) in contacts" :key="index"
+                <div class="contact-list-box" v-for="(contactItem, index) in filteredContacts " :key="index"
                     @mouseover="changeColor" ref="contactList" v-on:click="openChat(index)">
+
                     <div class="contact-box">
                         <div class="contact-info-box d-flex align-items-center">
                             <div>
