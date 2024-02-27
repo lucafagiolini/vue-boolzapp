@@ -179,7 +179,12 @@ main {
 }
 
 /* MESSAGE DROPDOWN */
-.fa-angle-up {
+.dropdown-arrow {
+    top: 0;
+    right: 0;
+}
+
+.fa-angle-down {
     font-size: 0.7rem;
     color: #4e5c62;
 }

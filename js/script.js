@@ -182,8 +182,7 @@ createApp({
     methods: {
         // function that will change the contact color when overing
         changeColor(index) {
-            // this.$refs.contactList[index].classList.add('hover');
-            // console.log("hover");
+            console.log("hover");
         },
 
         // function that will open the chat when clicked 
