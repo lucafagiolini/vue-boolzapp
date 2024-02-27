@@ -5,7 +5,6 @@ createApp({
 
         return {
             // tutti i nostri dati
-
             contacts: [
                 {
                     name: 'Michele',
@@ -171,6 +170,8 @@ createApp({
             ],
 
             activeIndex: 0,
+
+            newMessage: '',
         }
     },
 
@@ -187,6 +188,41 @@ createApp({
             // at the click il get the index of the contact and i will set it as the active index
             this.activeIndex = index;
             console.log(this.activeIndex);
+        },
+
+        // function that will send the message
+        sendMessage() {
+            // if the message is not empty
+            if (this.newMessage.trim() !== '') {
+                // i will push the message in the messages array of the active contact
+                this.contacts[this.activeIndex].messages.push({
+                    date: 'now',
+                    message: this.newMessage,
+                    status: 'sent'
+                });
+
+                // then i will reset the input
+                this.newMessage = '';
+
+
+
+                // then i will call the function that will send the automatic response
+                this.autoResponse();
+
+                console.log(this.contacts[this.activeIndex].messages);
+            }
+        },
+
+        // function that will send the automatic response
+        autoResponse() {
+            // i will create a new message with a timeout
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push({
+                    date: 'now',
+                    message: 'si ma, sti cazzi',
+                    status: 'received'
+                });
+            }, 1000);
         },
 
     },

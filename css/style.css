@@ -136,7 +136,13 @@ main {
     background-image: url(../img/mine.jpg);
     background-size: fill;
 
+
     height: calc(100% - 82px);
+}
+
+#chat-container {
+    max-height: 650px;
+    overflow-y: auto;
 }
 
 #chat-display-big-box {
@@ -168,4 +174,19 @@ main {
     font-size: 0.6rem;
     color: #b0b0b0;
 
+}
+
+
+/* INPUT MESSAGE */
+#input-message-box {
+    background-color: #f3eee9;
+}
+
+#input-message-box i {
+    font-size: 1.4rem;
+    color: #4e5c62;
+}
+
+#input-message-bar {
+    color: #4e5c62;
 }

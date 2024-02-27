@@ -31,7 +31,7 @@
     <div id="bg-main">
     </div>
 
-    <main id="app" class="container m-auto d-flex p-0">
+    <main id="app" class="container m-auto mt-5 mb-5 d-flex p-0">
 
 
 
@@ -148,8 +148,8 @@
             </header>
 
             <!-- inner chat display and messages -->
-            <div id="chat-display" class="">
-                <div id="chat-container" class="d-flex flex-column gap-3 p-5">
+            <div id="chat-display" class="d-flex flex-column">
+                <div id="chat-container" class="d-flex flex-column flex-grow-1 gap-3 p-5">
                     <div class="d-flex message p-2" :class="messageItem.status"
                         v-for="(messageItem, index) in contacts[activeIndex].messages" :key="index">
                         <div class="d-flex flex-column ">
@@ -159,16 +159,16 @@
                     </div>
                 </div>
 
+                <!-- input message -->
+                <div id="input-message-box" class="p-2 d-flex align-items-center">
+                    <i class="fa-regular fa-face-smile px-4"></i>
+                    <div class="input-group input-group-lg">
+                        <input id="input-message-bar" type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-lg" v-model="newMessage" @keyup.enter="sendMessage()">
+                    </div>
+                    <i class="fw-bold fa-solid fa-microphone px-4"></i>
+                </div>
             </div>
-
-            <!-- input message -->
-            <div>
-
-            </div>
-
-
-
-
         </section>
 
     </main>
