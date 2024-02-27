@@ -229,6 +229,12 @@ createApp({
             }, 1000);
         },
 
+        // function that will delete the message
+        deleteMessage(index) {
+            // i will delete the message from the messages array of the active contact
+            this.contacts[this.activeIndex].messages.splice(index, 1);
+        },
+
 
 
 

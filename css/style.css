@@ -178,6 +178,16 @@ main {
 
 }
 
+/* MESSAGE DROPDOWN */
+.fa-angle-up {
+    font-size: 0.7rem;
+    color: #4e5c62;
+}
+
+.dropdown-style li a {
+    font-size: 0.8rem;
+    color: #4e5c62;
+}
 
 /* INPUT MESSAGE */
 #input-message-box {

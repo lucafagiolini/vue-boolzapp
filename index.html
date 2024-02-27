@@ -154,7 +154,14 @@
                     <div class="d-flex message p-2" :class="messageItem.status"
                         v-for="(messageItem, index) in contacts[activeIndex].messages" :key="index">
                         <div class="d-flex flex-column ">
-                            <span>{{messageItem.message}}</span>
+                            <span>{{messageItem.message}} <a class="" data-bs-toggle="dropdown" aria-expanded="false"
+                                    href=""><i class="fa-solid fa-angle-up"></i></a>
+                                <ul class="dropdown-menu dropdown-style">
+                                    <li><a class="dropdown-item">Message info</a></li>
+                                    <li><a class="dropdown-item" @click="deleteMessage(index)">Delete
+                                            message</a></li>
+                                </ul>
+                            </span>
                             <span class="inner-message-date align-self-end">{{messageItem.date}}</span>
                         </div>
                     </div>
